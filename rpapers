@@ -1,0 +1,23 @@
+#первая игра))
+import random
+userIn = input("камень, ножницы или бумага?: ")
+pcElem = ["камень", "бумага", "ножницы"]
+pcIn = random.choice(pcElem)
+print(f"\nВы выбрали {userIn}, противник выбрал {pcIn}.\n")
+if userIn == pcIn:
+    print(f"Противник тоже выбрал {userIn}. Ничья!!")
+elif userIn == "камень":
+    if pcIn == "ножницы":
+        print("Вы победили!")
+    else:
+        print("Вы проиграли.")
+elif userIn == "бумага":
+    if pcIn == "камень":
+        print("Вы победили!")
+    else:
+        print("Вы проиграли.")
+elif userIn == "ножницы":
+    if pcIn == "бумага":
+        print("Вы победили!")
+    else:
+        print("Вы проиграли.")
